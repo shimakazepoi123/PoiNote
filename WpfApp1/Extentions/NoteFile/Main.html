@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="height: 100%;margin: 0;">
+    <head>
+        <title></title>
+        <link href="./CSS/LeftPanel.css" rel="stylesheet"/>
+        <style type="text/css">
+            body{
+                height: 100%;
+                margin: 0;
+                background-color: rgb(160, 162, 175);
+            }
+            .Pannel {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+            } 
+            .PannelSon {
+                position: relative;
+                width: 50%;
+                border: 0;
+                overflow:hidden;
+            } 
+            #left{
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+            }
+            hr {
+                position: relative;
+                margin: 0;
+            }
+            .text{
+                position: relative;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                width: 100%;
+                height: 100%;
+            }
+
+            .text::-webkit-scrollbar{
+                width: 12px;
+            }
+            .text::-webkit-scrollbar-track-piece{
+                background-color: rgb(141, 143, 156);
+            }
+
+            .text::-webkit-scrollbar-thumb{
+                background-color: rgb(119, 120, 134);
+                border: transparent;
+                border-radius: 10px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="Menu">
+
+        </div>
+        <div class="Pannel">
+            <div class="PannelSon" id="left">
+                <div class="Format">
+                    <button type="button">A</button>
+                    <button type="button" id="Bold">B</button>
+                    <button type="button" id="Italic">I</button>
+                    <button type="button" id="underline">U</button>
+                    <button type="button" id="deleteline">D</button>
+                    <button type="button" class="Header" id="H1">H1</button>
+                    <button type="button" class="Header" id="H2">H2</button>
+                    <button type="button" class="Header" id="H3">H3</button>
+                    <button type="button" class="Header" id="H4">H4</button>
+                    <button type="button" class="Header" id="H5">H5</button>
+                </div>
+                <div class="Editor">
+                    <textarea placeholder="在此输入文本"></textarea>
+                </div>
+                <div class="Count">
+                </div>
+            </div>
+            <hr color="#585a63">
+            <div class="PannelSon" id="right">
+                <div class="text">
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./JS/LeftPannel.js"></script>
+    <script src="./JS/pattern.js"></script>
+</html>

@@ -1,0 +1,152 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <WebView2LoaderPreference>Static</WebView2LoaderPreference>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	<PackageIcon>未标题-1.png</PackageIcon>
+	<PlatformTarget>x64</PlatformTarget>
+	<AnalysisLevel>6.0</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\NoteBook.png" />
+    <None Remove="Resources\NoteBook_s.png" />
+    <None Remove="Resources\三角形.png" />
+    <None Remove="Resources\三角形_上.png" />
+    <None Remove="Resources\三角形_下.png" />
+    <None Remove="Resources\保存.png" />
+    <None Remove="Resources\保存__1_.png" />
+    <None Remove="Resources\保存__1__小.png" />
+    <None Remove="Resources\保存_小.png" />
+    <None Remove="Resources\减.png" />
+    <None Remove="Resources\减__1_.png" />
+    <None Remove="Resources\减__1__小.png" />
+    <None Remove="Resources\删除文件夹.png" />
+    <None Remove="Resources\删除文件夹_s.png" />
+    <None Remove="Resources\删除标签_小.png" />
+    <None Remove="Resources\图标.png" />
+    <None Remove="Resources\增加标签.png" />
+    <None Remove="Resources\增加标签_小.png" />
+    <None Remove="Resources\太阳.png" />
+    <None Remove="Resources\导出.png" />
+    <None Remove="Resources\帮助.png" />
+    <None Remove="Resources\帮助_小.png" />
+    <None Remove="Resources\文件夹.png" />
+    <None Remove="Resources\文件夹1.png" />
+    <None Remove="Resources\最大化_小.png" />
+    <None Remove="Resources\最小化.png" />
+    <None Remove="Resources\最小化_小.png" />
+    <None Remove="Resources\月亮.png" />
+    <None Remove="Resources\未标题_1.png" />
+    <None Remove="Resources\添加.png" />
+    <None Remove="Resources\添加_小.png" />
+    <None Remove="Resources\退出.png" />
+    <None Remove="Resources\退出__1_.png" />
+    <None Remove="Resources\退出__2_.png" />
+    <None Remove="Resources\退出_小.png" />
+    <None Remove="Resources\选项.png" />
+    <None Remove="Resources\选项_小.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\NoteBook.png" />
+    <Resource Include="Resources\NoteBook_s.png" />
+    <Resource Include="Resources\三角形.png" />
+    <Resource Include="Resources\三角形_上.png" />
+    <Resource Include="Resources\三角形_下.png" />
+    <Resource Include="Resources\保存.png" />
+    <Resource Include="Resources\保存__1_.png" />
+    <Resource Include="Resources\保存__1__小.png" />
+    <Resource Include="Resources\保存_小.png" />
+    <Resource Include="Resources\减.png" />
+    <Resource Include="Resources\减__1_.png" />
+    <Resource Include="Resources\减__1__小.png" />
+    <Resource Include="Resources\删除文件夹.png" />
+    <Resource Include="Resources\删除文件夹_s.png" />
+    <Resource Include="Resources\删除标签_小.png" />
+    <Resource Include="Resources\图标.png" />
+    <Resource Include="Resources\增加标签.png" />
+    <Resource Include="Resources\增加标签_小.png" />
+    <Resource Include="Resources\太阳.png" />
+    <Resource Include="Resources\导出.png" />
+    <Resource Include="Resources\帮助.png" />
+    <Resource Include="Resources\帮助_小.png" />
+    <Resource Include="Resources\文件夹.png" />
+    <Resource Include="Resources\文件夹1.png" />
+    <Resource Include="Resources\最大化_小.png" />
+    <Resource Include="Resources\最小化.png" />
+    <Resource Include="Resources\最小化_小.png" />
+    <Resource Include="Resources\月亮.png" />
+    <Resource Include="Resources\未标题_1.png" />
+    <Resource Include="Resources\添加.png" />
+    <Resource Include="Resources\添加_小.png" />
+    <Resource Include="Resources\退出.png" />
+    <Resource Include="Resources\退出__1_.png" />
+    <Resource Include="Resources\退出__2_.png" />
+    <Resource Include="Resources\退出_小.png" />
+    <Resource Include="Resources\选项.png" />
+    <Resource Include="Resources\选项_小.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.31.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1587.40" />
+    <PackageReference Include="Mustachio" Version="2.1.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.117" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extentions\NoteFile\" />
+    <Folder Include="HTML\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="未标题-1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Form\TagAdd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Form\AddFile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="未标题-1.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

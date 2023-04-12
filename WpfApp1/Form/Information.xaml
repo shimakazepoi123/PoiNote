@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp1.Form.Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Form"
+        xmlns:my="clr-namespace:WpfApp1.UserMade"
+        mc:Ignorable="d"
+        Title="Information" Height="150" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Background="#474f6c">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Height="30" FontSize="15" Padding="0,0,0,0">文献路径</Label>
+            <my:RoundTextBox x:Name="TextBox2" Width="150px" Height="30" Margin="10,-10,0,0" VerticalAlignment="Center" TextBoxText=""></my:RoundTextBox>
+            <my:UserControl1 Width="80" Height="25" Margin="10,0,0,5" ButtonText="浏览" ButtonClick="Throw" VerticalAlignment="Center"></my:UserControl1>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <my:UserControl1 Width="80" Height="25" Margin="10,0,0,5" ButtonText="确定" ButtonClick="Yes_Click" VerticalAlignment="Center" ></my:UserControl1>
+            <my:UserControl1 Width="80" Height="25" Margin="30,0,0,5" ButtonText="取消" ButtonClick="Cancel_Click" VerticalAlignment="Center"></my:UserControl1>
+        </StackPanel>
+    </Grid>
+
+</Window>
+
